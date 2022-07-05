@@ -1,6 +1,6 @@
 import { BrowserRouter } from "react-router-dom";
 import Nav from "./Nav";
-import "./App.css";
+import Routes from "./Routes";
 
 import whiskey from "./images/whiskey.jpg";
 import duke from "./images/duke.jpg";
@@ -9,10 +9,11 @@ import tubby from "./images/tubby.jpg";
 
 function App({ dogs }) {
   return (
-    <div className="App">
+    <div>
       <h1>Who let the dogs out?</h1>
       <BrowserRouter>
         <Nav dogs={dogs} />
+        <Routes dogs={dogs} />
       </BrowserRouter>
     </div>
   );

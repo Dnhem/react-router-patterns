@@ -1,5 +1,6 @@
 import { Switch, Route, Redirect } from "react-router-dom";
 import DogList from "./DogList";
+import CheckDogDetails from "./CheckDogDetails";
 
 const Routes = ({ dogs }) => {
   return (
@@ -7,9 +8,9 @@ const Routes = ({ dogs }) => {
       <Route exact path="/dogs">
         <DogList dogs={dogs} />
       </Route>
-      {/* <Route path="/dogs/:name">
-        <DogDetails />
-      </Route> */}
+      <Route path="/dogs/:name">
+        <CheckDogDetails dogs={dogs} />
+      </Route>
       <Redirect to="/dogs" />
     </Switch>
   );
